@@ -1,20 +1,9 @@
-
-function FilterBar({ filter, setFilter }) {
+export default function FilterBar() {
   return (
-    <div className="filter-bar">
-      <button onClick={() => setFilter("all")}>
-        All
-      </button>
-
-      <button onClick={() => setFilter("active")}>
-        Active
-      </button>
-
-      <button onClick={() => setFilter("completed")}>
-        Completed
-      </button>
+    <div>
+      <button>All</button>
+      <button>Active</button>
+      <button>Completed</button>
     </div>
   );
-}
-
-export default FilterBar;
+}anda
