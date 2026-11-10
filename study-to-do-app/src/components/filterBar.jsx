@@ -1,18 +1,18 @@
 
-function FilterBar({ filter, onChange }) {
-  const filters = ["All", "Pending", "Completed"];
-
+function FilterBar({ filter, setFilter }) {
   return (
     <div className="filter-bar">
-      {filters.map(item => (
-        <button
-          key={item}
-          onClick={() => onChange(item)}
-          className={filter === item ? "active" : ""}
-        >
-          {item}
-        </button>
-      ))}
+      <button onClick={() => setFilter("all")}>
+        All
+      </button>
+
+      <button onClick={() => setFilter("active")}>
+        Active
+      </button>
+
+      <button onClick={() => setFilter("completed")}>
+        Completed
+      </button>
     </div>
   );
 }
